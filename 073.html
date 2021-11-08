@@ -28,6 +28,7 @@
 
     article {
         display: flex;
+        /* main 축 */
         justify-content: space-between;
         background: black;
         width: 350px;
@@ -56,6 +57,11 @@
 </style>
 
 <body>
+    <!-- article! 직계자식한테만 적용 -->
+    <!-- 여기서 직계자식은 div의 lefr_side -->
+    <!-- left_side의 자식은 blue,green, yellow -->
+    <!-- 손주니깐 적용안된다. 그러므로 display: flex;
+        justify-content: space-between; 다시 줘야함 -->
     <article>
         <div class="left_side">
             <div class="blue"></div>
