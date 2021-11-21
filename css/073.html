@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 문제</title>
+</head>
+<style>
+    div {
+        width: 50px;
+        height: 50px
+    }
+
+    .blue {
+        background: blue
+    }
+
+    .green {
+        background: green
+    }
+
+    .yellow {
+        background: yellow
+    }
+
+
+    article {
+        display: flex;
+        /* main 축 */
+        justify-content: space-between;
+        background: black;
+        width: 350px;
+        height: 300px;
+        
+    }
+    .center{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 300px;  
+    }
+    .right_side{
+        display: flex;
+        justify-content: space-between;
+        height: 300px;
+        flex-direction: column-reverse;
+    }
+    .left_side {
+        display: flex;
+        justify-content: space-between;
+        height: 300px;
+        flex-direction: column;
+    }
+
+</style>
+
+<body>
+    <!-- article! 직계자식한테만 적용 -->
+    <!-- 여기서 직계자식은 div의 lefr_side -->
+    <!-- left_side의 자식은 blue,green, yellow -->
+    <!-- 손주니깐 적용안된다. 그러므로 display: flex;
+        justify-content: space-between; 다시 줘야함 -->
+    <article>
+        <div class="left_side">
+            <div class="blue"></div>
+            <div class="green"></div>
+            <div class="yellow"></div>
+        </div>
+        <div class="center">
+            <div class="blue"></div>
+            <div class="yellow"></div>
+        </div>
+        <div class="right_side">
+            <div class="blue"></div>
+            <div class="green"></div>
+            <div class="yellow"></div>
+        </div>
+    </article>
+</body>
+</html>
