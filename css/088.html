@@ -5,30 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>transition, transform</title>
-    <!-- transition은 값의 변화가 일정 시간에 걸쳐 일어나도록 하는 것! -->
     <style>
     div{
         width: 100px;
         height: 100px;
         background-color: red;
         transition: all 2s;
-        /* 2초동안 변화하세요라는 뜻. */
     }
 
     div:hover{
         width: 300px;
         height: 300px;
         background-color: blue;
-        transform: scale(2) rotate(360deg) translate(100px, 100px) skew(20deg);
+        transform: scale(1.2) rotate(360deg) translate(100px, 100px) skew(20deg);
     }
-    /*  scale(2): 두 배 커지세요! 
-        rotate: 회전 시켜주는 값. 360deg는 한 바퀴를 뜻한다.
-        translate(x축, y축) : x,y축 지점으로 이동 시켜주는 값! 음수 값을 적용하면 반대 방향으로 이동!
-        skew: 비틀기. */
+
     .one {
         transition-delay: 1s;
     }
-    /* delay는 말 그대로 지연. 1초 있다가 실행되는 것임. */
+
     .two{
         transition-delay: 2s;
     }
