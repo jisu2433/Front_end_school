@@ -14,11 +14,16 @@
 // *********
 
 //해설
-const level = 5; //변하지 않아서 const
+const level = 5; //변하지 않아서 const, 5줄 나와야함
 
 for(let i=1 ; i<=level; i++){
     let tree = ""; // 값 초기화 때문에 위치
-    for(let j=1; j<=i; j++){
+    //공백 증가 포문
+    for(let k=1; k<=level-i; k++){
+    tree = tree + " ";
+    }
+    //별 증가 포문
+    for(let j=1; j<=i*2-1; j++){
     tree = tree + "*";
     }
     console.log(tree);
